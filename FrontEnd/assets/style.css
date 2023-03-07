@@ -78,7 +78,52 @@ h1 > span {
 ;
 }
 
-h2{
+.filtres {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2%;
+    font-weight: bold;
+    margin-bottom: 2%;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+	width: 60%;
+}
+
+button {
+	font-family: 'Syne';
+	font-size: 20px;
+	color: #1D6154;
+	background-color: white;
+}
+
+.active {
+	background-color: #1D6154;
+	color: white;
+}
+
+.li_fil {
+    display: inline;
+    border:1px solid grey;
+    border-radius: 20px;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+h2 {
 	font-family: 'Syne';
 	font-weight: 700;
 	font-size: 30px;
@@ -98,6 +143,7 @@ nav li {
 li:hover {
 	color: #B1663C;
 }
+
 #introduction {
 	display: flex;
 	align-items: center;
