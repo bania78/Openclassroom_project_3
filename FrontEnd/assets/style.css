@@ -140,7 +140,7 @@ nav li {
 	font-size: 1.2em;
 }
 
-li:hover {
+li:hover, a:hover {
 	color: #B1663C;
 }
 
@@ -167,7 +167,7 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
+#portfolio h2, #login h2 {
 	text-align: center;
 	margin-bottom: 1em;
 }
@@ -226,9 +226,17 @@ input[type="submit"]{
 	border-radius: 60px ;
 }
 
+a {
+    text-decoration: none;
+	color: black;
+}
+
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
 
+.log {
+	font-weight: bold;
+}
