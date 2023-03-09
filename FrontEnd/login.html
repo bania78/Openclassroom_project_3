@@ -25,12 +25,13 @@
     <main>
         <section id="login">
 		    <h2>Log in</h2>
+            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
             <form class="input">
                 <label for="email">E-mail</label>
-                <input type="email">
+                <input class="log-mail" type="email" name="username" required>
                 <label for="password">Mot de passe</label>
-                <input type="password">
-                <input type="submit" value="Se connecter">
+                <input class="log-pass" type="password" name="password" required>
+                <input class="submit" type="submit" value="Se connecter">
                 <a class="forgot-pass">Mot de passe oublié</a>
             </form>
         </section>
@@ -42,4 +43,5 @@
             </ul>
         </nav>
     </footer>
+    <script type="text/javascript" src="login.js"></script>
 </body>

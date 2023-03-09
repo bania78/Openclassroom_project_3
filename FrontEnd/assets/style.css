@@ -241,6 +241,11 @@ footer nav ul {
 	font-weight: bold;
 }
 
+#login-error-msg {
+	color: red;
+	opacity: 0;
+}
+
 .forgot-pass {
 	text-decoration:underline;
 	margin: auto;
