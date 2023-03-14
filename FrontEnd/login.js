@@ -7,15 +7,28 @@ loginButton.addEventListener("click", (e) => {
     const password = document.querySelector(".log-pass").value;
     const login = 'http://localhost:5678/api/users/login';
 
-    fetch(login, {
+    let i = fetch(login, {
         method: "POST",
         headers: {
             Accept: "application/json, text/plain, */*",
             "Content-Type": "application/json",
-          },
+        },
         body: JSON.stringify({
-          "email": username,
-          "password": password
-        })
-      });
+            "email": username,
+            "password": password
+        }),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+        if (data.error) {
+            loginErrorMsg.opacity = 1;
+        } else {
+            window.open("index.html");
+        }
+    })
+    .catch((err) => {
+        console.log(err);
+    }
+    );
 })
