@@ -8,39 +8,102 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+    <script src="https://kit.fontawesome.com/2e7a3340e1.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 <header>
-	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
-	<nav>
-		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li><a href="login.html">login</a></li>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-		</ul>
-	</nav>
+	<div class="dad_popup">
+		<div class="popup">
+			<i class="fa fa-xmark"></i>
+			<i class="fa fa-arrow-left"></i>
+			<div class="galerie">
+				<h3>Galerie photo</h3>
+				<div class="gallery_popup">
+				</div>
+				<input class="add" type="submit" value="Ajouter une photo">
+				<p class="supp">Supprimer la galerie</p>
+			</div>
+			<div class="ajout">
+				<h3>Ajout photo</h3>
+				<section id="add">
+					<p class="token-error-msg">Session utilisateur expirée, veyez-vous authentifier de nouveau.</p>
+					<p class="content-error-msg">Veyez remplir tout les champs.</p>
+					<form class="input">
+						<div class="add_image">
+							<i class="fa fa-image before_add"></i>
+							<label class="label before_add" for="image_uploads">+ Ajouter photo</label>
+							<p class="before_add">jpg, png : 4mo max</p>
+							<input type="file" class="image_uploads" id="image_uploads" name="image_uploads" accept="image/png, image/jpeg, image/jpg" required>
+						</div>
+						<div class="div_input">
+							<label for="title">Titre</label>
+							<input class="title" id="title" type="text" required>
+							<label for="categorie">Catégorie</label>
+							<select class="selectCategory" name="selectCategory" id="categorie">
+								<option value=""></option>
+							</select>
+						</div>
+						<input class="valid grey" id="valid" type="submit" value="Valider">
+					</form>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="edit-head edit">
+		<div class="editing">
+			<div class="mode_edition">
+				<i class="fa fa-pen-to-square"></i>
+				<p>Mode édition</p>
+			</div>
+			<p class="publish">publier les changements</p>
+		</div>
+	</div>
+	<div class="div_head">
+		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+		<nav>
+			<ul>
+				<li>projets</li>
+				<li>contact</li>
+				<li class="not_edit"><a href="login.html">login</a></li>
+                <li class="logout edit">logout</li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 <main>
 	<section id="introduction">
-		<figure>
-			<img src="./assets/images/sophie-bluel.png" alt="">
-		</figure>
-		<article>
-			<h2>Designer d'espace</h2>
-			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
-		</article>
+		<div class="show_flex">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+			</figure>
+			<article>
+				<div class="modify_tres edit">
+					<i class="fa fa-pen-to-square"></i>
+					<p>modifier</p>
+				</div>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			</article>
+		</div>
+		<div class="modify edit">
+			<i class="fa fa-pen-to-square"></i>
+			<p>modifier</p>
+		</div>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="filtres">
-			<button class="li_fil active" onclick="filterSelection('all')">Tous</button>
-			<button class="li_fil" onclick="filterSelection(1)">Objets</button>
-			<button class="li_fil" onclick="filterSelection(2)">Appartements</button>
-			<button class="li_fil" onclick="filterSelection(3)">Hôtels & restaurants</button>
+		<div class="div_proj">
+			<h2 class="my_project">Mes Projets</h2>
+			<div class="modify_bis edit">
+				<i class="fa fa-pen-to-square"></i>
+				<p>modifier</p>
+			</div>
+		</div>
+		<div class="filtres not_edit">
+			<button class="li_fil active">Tous</button>
         </div>
 		<div class="gallery">
 		</div>
@@ -60,9 +123,6 @@
 			<input type="submit" value="Envoyer">
 		</form>
 	</section>
-	<script type="text/javascript">
-
-	</script>
 </main>
 
 <footer>

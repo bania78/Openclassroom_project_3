@@ -1,5 +1,16 @@
 const loginButton = document.querySelector(".submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+let loginErrorMsg = document.querySelector(".login-error-msg");
+let edit = document.getElementsByClassName("edit");
+
+function addClass(element, name) {
+    let arr1 = element.className.split(" ");
+    let arr2 = name.split(" ");
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+        }
+    }
+}
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -20,10 +31,12 @@ loginButton.addEventListener("click", (e) => {
     })
     .then((response) => response.json())
     .then((data) => {
-        console.log(data)
-        if (data.error) {
-            loginErrorMsg.opacity = 1;
+        console.log(data);
+        if (data.message == "user not found" || data.error) {
+            loginErrorMsg.style.opacity = 1;
         } else {
+            sessionStorage.setItem('log', data.token);
+            console.log(sessionStorage.getItem('log'));
             window.open("index.html");
         }
     })
